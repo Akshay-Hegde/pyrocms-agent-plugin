@@ -1,7 +1,7 @@
 # User Agent Plugin
   
 Plugin for PyroCMS. A complete reflection of the Codeigniter User Agent Class plus a few extra
-methods for hiding and showing on mobile devices.
+methods for hiding and showing content on mobile devices.
 
 * Version 1.0
 * Compatible with PyroCMS v2.0.x
