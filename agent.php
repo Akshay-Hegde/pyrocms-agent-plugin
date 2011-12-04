@@ -36,9 +36,9 @@ class Plugin_Agent extends Plugin
    	 * Hide content from mobile devices.
    	 *
    	 * Usage:
-   	 * {{ agent:is_mobile_hide }}
+   	 * { pyro:agent:is_mobile_hide }
      *  "You won't see this on mobile."
-     * {{ /agent:is_mobile_hide }}
+     * { pyro::is_mobile_hide }
      *
      * @match   string (optional)
    	 * @return	array
@@ -55,9 +55,9 @@ class Plugin_Agent extends Plugin
    	 * Only show content on mobile devices.
    	 *
    	 * Usage:
-   	 * {{ agent:is_mobile_show }}
+   	 * { pyro:agent:is_mobile_show }
      *  "This is only shown on mobile devices."
-     * {{ /agent:is_mobile_show }}
+     * { pyro::is_mobile_show }
      *
    	 * @match   string (optional)
    	 * @return	array
@@ -74,11 +74,11 @@ class Plugin_Agent extends Plugin
    	 * Returns TRUE/FALSE (boolean) if the user agent is a known web browser.
    	 *
    	 * Usage:
-     * {{ agent:is_browser }}
+     * { pyro:agent:is_browser }
      *
      * or
      *
-     * {{ agent:is_browser match="Firefox" }}
+     * { pyro:agent:is_browser match="Firefox" }
      *
      * @match   string (optional)
    	 * @return	boolean
@@ -95,7 +95,7 @@ class Plugin_Agent extends Plugin
    	 * Returns a string containing the name of the web browser viewing your site.
    	 *
    	 * Usage:
-   	 * {{ agent:browser }}
+   	 * { pyro:agent:browser }
    	 *
      * @param   none
    	 * @return	string
@@ -109,7 +109,7 @@ class Plugin_Agent extends Plugin
    	 * Returns a string containing the version number of the web browser viewing your site.
    	 *
    	 * Usage:
-   	 * {{ agent:version }}
+   	 * { pyro:agent:version }
    	 *
      * @param   none
    	 * @return	string
@@ -123,11 +123,11 @@ class Plugin_Agent extends Plugin
    	 * Returns TRUE/FALSE (boolean) if the user agent is a known mobile device.
    	 *
    	 * Usage:
-     * {{ agent:is_mobile }}
+     * { pyro:agent:is_mobile }
      *
      * or
      *
-     * {{ agent:is_mobile match="iphone" }}
+     * { pyro:agent:is_mobile match="iphone" }
      *
      * @match   string (optional)
    	 * @return	boolean
@@ -144,7 +144,7 @@ class Plugin_Agent extends Plugin
    	 * Returns a string containing the name of the mobile device viewing your site.
    	 *
    	 * Usage:
-   	 * {{ agent:mobile }}
+   	 * { pyro:agent:mobile }
    	 *
      * @param   none
    	 * @return	string
@@ -161,7 +161,7 @@ class Plugin_Agent extends Plugin
    	 * Returns a string containing the platform viewing your site (Linux, Windows, OS X, etc.).
    	 *
    	 * Usage:
-   	 * {{ agent:platform }}
+   	 * { pyro:agent:platform }
    	 *
      * @param   none
    	 * @return	string
@@ -175,7 +175,7 @@ class Plugin_Agent extends Plugin
    	 * Returns TRUE/FALSE (boolean) if the user agent was referred from another site.
    	 *
    	 * Usage:
-   	 * {{ agent:is_referral }}
+   	 * { pyro:agent:is_referral }
    	 *
      * @param   none
    	 * @return	boolean
@@ -192,7 +192,7 @@ class Plugin_Agent extends Plugin
    	 * Returns a string of the referrer site.
    	 *
    	 * Usage:
-   	 * {{ agent:referrer }}
+   	 * { pyro:agent:referrer }
    	 *
      * @param   none
    	 * @return	string
@@ -209,7 +209,7 @@ class Plugin_Agent extends Plugin
    	 * Returns a string containing the full user agent string.
    	 *
    	 * Usage:
-   	 * {{ agent:full_string }}
+   	 * { pyro:agent:full_string }
    	 *
      * @param   none
    	 * @return	string
@@ -223,7 +223,7 @@ class Plugin_Agent extends Plugin
    	 * Returns TRUE/FALSE (boolean) if the user agent is a known robot.
    	 *
    	 * Usage:
-   	 * {{ agent:is_robot }}
+   	 * { pyro:agent:is_robot }
      *
      * @param   none
    	 * @return	boolean
@@ -240,7 +240,7 @@ class Plugin_Agent extends Plugin
 	 * Returns a string containing the name of the robot viewing your site.
 	 *
 	 * Usage:
-	 * {{ agent:robot }}
+	 * { pyro:agent:robot }
 	 *
      * @param   none
    	 * @return	string
@@ -257,7 +257,7 @@ class Plugin_Agent extends Plugin
    	 * Lets you determine if the user agent accepts a particular language.
    	 *
    	 * Usage:
-   	 * {{ agent:accept_language match="en" }}
+   	 * { pyro:agent:accept_language match="en" }
    	 *
      * @match   string (optional)
    	 * @return	boolean
@@ -274,7 +274,7 @@ class Plugin_Agent extends Plugin
    	 * Lets you determine if the user agent accepts a particular character set.
    	 *
    	 * Usage:
-   	 * {{ agent:accept_charset match="utf-8"}}
+   	 * { pyro:agent:accept_charset match="utf-8"}
    	 *
      * @match   string (optional)
    	 * @return	boolean
