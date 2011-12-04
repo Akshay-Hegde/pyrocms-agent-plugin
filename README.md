@@ -5,7 +5,7 @@ methods for hiding and showing content on mobile devices.
 
 * Version 1.0
 * Compatible with PyroCMS v2.0.x
-* [Issues](https://github.com/obrignoni/pyro-agent-plugin/issues)
+* [Issue Tracker](https://github.com/obrignoni/pyrocms-agent-plugin/issues)
 * [PyroCMS Website](http://pyrocms.com/)
 * [Codeigniter User Guide - User Agent Class](http://codeigniter.com/user_guide/libraries/user_agent.html)
 
