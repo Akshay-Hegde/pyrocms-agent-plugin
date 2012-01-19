@@ -37,7 +37,7 @@ class Plugin_Agent extends Plugin
      *
      * Usage:
      * {{ agent:is_mobile_hide }}
-     * 	"You won't see this on mobile."
+     * 	You won't see this on mobile.
      * {{ /agent:is_mobile_hide }}
      *
      * @match   string (optional)
@@ -76,11 +76,11 @@ class Plugin_Agent extends Plugin
      * Returns TRUE/FALSE (boolean) if the user agent is a known web browser.
      *
      * Usage:
-     * {{ agent:is_browser }}
-     *
-     * or
-     *
-     * {{ agent:is_browser match="Firefox" }}
+     * {{ if { agent:is_browser match="Firefox" } }}
+     *	Yes, this is Firefox.
+     * {{ else }}
+     *	No, this is not Firefox.
+     * {{ endif }}
      *
      * @match   string (optional)
      * @return	boolean
@@ -122,12 +122,12 @@ class Plugin_Agent extends Plugin
      * Returns TRUE/FALSE (boolean) if the user agent is a known mobile device.
      *
      * Usage:
-     * {{ agent:is_mobile }}
-     *
-     * or
-     *
-     * {{ agent:is_mobile match="iphone" }}
-     *
+     * {{ if { agent:is_mobile match="iphone" } }}
+     *	Yes, this is an iphone.
+     * {{ else }}
+     *	No, this is not an iphone.
+     * {{ endif }}
+     * 
      * @match   string (optional)
      * @return	boolean
      */
@@ -172,7 +172,11 @@ class Plugin_Agent extends Plugin
      * Returns TRUE/FALSE (boolean) if the user agent was referred from another site.
      *
      * Usage:
-     * {{ agent:is_referral }}
+     * {{ if { agent:is_referral } }}
+     *	Yes it is.
+     * {{ else }}
+     *	No.
+     * {{ endif }}
      *
      * @param   none
      * @return	boolean
@@ -218,7 +222,11 @@ class Plugin_Agent extends Plugin
      * Returns TRUE/FALSE (boolean) if the user agent is a known robot.
      *
      * Usage:
-     * {{ agent:is_robot }}
+     * {{ if { agent:is_robot } }}
+     *	Yes it is.
+     * {{ else }}
+     *	No.
+     * {{ endif }}
      *
      * @param   none
      * @return	boolean
@@ -250,7 +258,11 @@ class Plugin_Agent extends Plugin
      * Lets you determine if the user agent accepts a particular language.
      *
      * Usage:
-     * {{ agent:accept_language match="en" }}
+     * {{ if { agent:accept_language match="en" } }}
+     *	Yes.
+     * {{ else }}
+     *	No.
+     * {{ endif }}
      *
      * @match   string (optional)
      * @return	boolean
@@ -264,7 +276,11 @@ class Plugin_Agent extends Plugin
      * Lets you determine if the user agent accepts a particular character set.
      *
      * Usage:
-     * {{ agent:accept_charset match="utf-8"}}
+     * {{ if { agent:accept_charset match="utf-8" } }}
+     *	Yes.
+     * {{ else }}
+     *	No.
+     * {{ endif }}
      *
      * @match   string (optional)
      * @return	boolean

@@ -1,80 +1,231 @@
-# User Agent Plugin
+# USER AGENT PLUGIN
   
 Plugin for PyroCMS. A complete reflection of the Codeigniter User Agent Class plus a few extra
 methods for hiding and showing content on mobile devices.
 
 * Version 1.0
 * Compatible with PyroCMS v2.0.x
+* [Author - Osvaldo Brignoni](http://obrignoni.com)
 * [Issue Tracker](https://github.com/obrignoni/pyrocms-agent-plugin/issues)
 * [PyroCMS Website](http://pyrocms.com/)
 * [Codeigniter User Guide - User Agent Class](http://codeigniter.com/user_guide/libraries/user_agent.html)
 
-## Examples with Lex tags
+___
 
-### Is mobile hide
+# USAGE
+
+## IS MOBILE HIDE
+Hide content from mobile devices.
+
+### Arguments
+* __match__ (optional) - The module"s slug.
+
+__Example__
 
     {{ agent:is_mobile_hide }}  
     
-      "You won't see this on mobile."
+        You won't see this on mobile.
     
     {{ /agent:is_mobile_hide }}
 
-### Is mobile show
+___
+
+## IS MOBILE SHOW
+Show content on mobile devices only.
+
+### Arguments
+* __match__ (optional) - The module"s slug.
+
+__Example__
 
     {{ agent:is_mobile_show }}
   
-      "This is only shown on mobile devices."
+        This is only shown on mobile devices.
   
     {{ /agent:is_mobile_show }}
-  
-### Is Browser Firefox
 
-    {{ agent:is_browser match="Firefox" }}
+___
 
-### Browser
+## IS BROWSER
+Returns TRUE/FALSE (boolean) if the user agent is a known web browser.
+
+### Arguments
+* __match__ (optional) - The module"s slug.
+
+__Example__
+
+    {{ if { agent:is_browser match="Firefox" } }}
+    
+        Yes, this is Firefox.
+        
+    {{ else }}
+    
+        No, this is not Firefox.
+    
+    {{ endif }}
+
+___
+
+## BROWSER
+Returns a string containing the name of the web browser viewing your site.
+
+### Arguments
+* __none__
+
+__Example__
 
     {{ agent:browser }}
 
-### Version
+___
+
+## VERSION
+Returns a string containing the version number of the web browser viewing your site.
+
+### Arguments
+* __none__
 
     {{ agent:version }}
 
-### Is mobile
+___
 
-    {{ agent:is_mobile }}
+## IS MOBILE
+Returns TRUE/FALSE (boolean) if the user agent is a known mobile device.
 
-### Mobile
+### Arguments
+* __none__
+
+__Example__
+
+    {{ if { agent:is_mobile } }}
+    
+        Yes it is.
+    
+    {{ else }}
+
+        No.
+    
+    {{ endif }}
+
+___
+
+## MOBILE
+Returns a string containing the name of the mobile device viewing your site.
+
+### Arguments
+* __none__
+
+__Example__
 
     {{ agent:mobile }}
 
-### Is robot
+___
 
-    {{ agent:is_robot }}
+## IS ROBOT
+Returns TRUE/FALSE (boolean) if the user agent is a known robot.
 
-### Robot
+### Arguments
+* __none__
+
+__Example__
+
+    {{ if { agent:is_robot } }}
+    
+        Yes it is.
+    
+    {{ else }}
+
+        No.
+    
+    {{ endif }}
+
+___
+
+## ROBOT
+Returns a string containing the name of the robot viewing your site.
+
+### Arguments
+* __none__
+
+__Example__
 
     {{ agent:robot }}
 
-### Platform
+___
+
+## PLATFORM
+Returns a string containing the platform viewing your site (Linux, Windows, OS X, etc.).
+
+### Arguments
+* __none__
+
+__Example__
 
     {{ agent:platform }}
 
-### Is referral
+___
 
-    {{ agent:is_referral }}
+## IS REFERRAL
+Returns TRUE/FALSE (boolean) if the user agent was referred from another site.
 
-### Referrer
+### Arguments
+* __none__
+
+__Example__
+
+    {{ if { agent:is_referral } }}
+    
+        Yes it is.
+    
+    {{ else }}
+
+        No.
+    
+    {{ endif }}
+
+___
+
+## REFERRER
+Returns a string of the referrer site.
+
+### Arguments
+* __none__
+
+__Example__
 
     {{ agent:referrer }}
 
-### Full string
+___
+
+## FULL STRING
+Returns a string containing the full user agent string.
+
+### Arguments
+* __none__
+
+__Example__
 
     {{ agent:full_string }}
+    
+___
 
-### Accept language
+## ACCEPT LANGUAGE
+Lets you determine if the user agent accepts a particular language.
+
+### Arguments
+* __match__ (optional) - The language code.
+
+__Example__
 
     {{ agent:accept_language match="en" }}
 
-### Accept charset
+___
+
+## ACCEPT CHARSET
+Lets you determine if the user agent accepts a particular character set.
+
+### Arguments
+* __match__ (optional) - The charset name.
+
+__Example__
 
     {{ agent:accept_charset match="utf-8"}}
